@@ -28,7 +28,11 @@ y_predicted = regression_model.predict(x)
 print("misclassified: ",(y != y_predicted).sum())
 
 #Model evaluation
+# mean_squared_error measures the average of the squares of the errors that is 
+# average squared difference between the predicted values and the estimated values
 rmse = mean_squared_error(y,y_predicted)
+# R2 provides a measure of how well future samples are likely to be predicted by
+# the model. Best possible score is 1.0 and it can also be negative.
 r2= r2_score(y,y_predicted)
 
 #Printing values
